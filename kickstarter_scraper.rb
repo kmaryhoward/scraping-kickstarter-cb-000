@@ -1,6 +1,8 @@
 require 'nokogiri'
 require 'pry'
 
+class Scraper
+  
 def create_project_hash
   html = File.read('fixtures/kickstarter.html')
 
@@ -8,3 +10,7 @@ def create_project_hash
 
   binding.pry
 end
+
+end
+
+Scraper.new.create_project_hash
